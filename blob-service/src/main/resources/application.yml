@@ -6,7 +6,7 @@ spring:
       max-file-size: 50MB
       max-request-size: 50MB
 server:
-  port:8085
+  port: 8085
 minio:
   endpoint: localhost
   port: 9000
