@@ -8,6 +8,7 @@ class VoteServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// empty
 	}
 
 }

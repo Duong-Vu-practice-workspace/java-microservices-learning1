@@ -8,6 +8,7 @@ class BlobServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// empty
 	}
 
 }

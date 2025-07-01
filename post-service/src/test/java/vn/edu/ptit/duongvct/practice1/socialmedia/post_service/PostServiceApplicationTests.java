@@ -8,6 +8,7 @@ class PostServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
+		// empty
 	}
 
 }
