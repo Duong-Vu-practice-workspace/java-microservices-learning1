@@ -23,11 +23,10 @@ repositories {
 	mavenCentral()
 }
 val minioVersion = "8.5.17";
-val modelMapperVersion = "3.2.4";
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("io.minio:minio:${minioVersion}")
-	implementation("org.modelmapper:modelmapper:${modelMapperVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.projectlombok:lombok")
