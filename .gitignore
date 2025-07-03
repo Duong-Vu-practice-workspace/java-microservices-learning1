@@ -26,4 +26,5 @@ replay_pid*
 **/.env
 **/.idea
 
-**/application.yml
+# **/application.yml
+# **/*-service.yml

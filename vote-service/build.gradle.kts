@@ -22,9 +22,11 @@ configurations {
 repositories {
 	mavenCentral()
 }
+extra["springCloudVersion"] = "2025.0.0"
 val modelMapperVersion = "3.2.4";
 val openApiWebUIVersion = "2.8.9";
 dependencies {
+	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.modelmapper:modelmapper:${modelMapperVersion}")
@@ -36,7 +38,11 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
-
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+	}
+}
 tasks.withType<Test> {
 	useJUnitPlatform()
 }

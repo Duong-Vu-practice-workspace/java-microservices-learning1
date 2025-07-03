@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: post-service
+  config:
+    import: optional:configserver:http://localhost:8888
+  data:
+    mongodb:
+      uri: ${MONGO_URI}
+      database: post
+
+server:
+  port: ${SERVER_PORT}
