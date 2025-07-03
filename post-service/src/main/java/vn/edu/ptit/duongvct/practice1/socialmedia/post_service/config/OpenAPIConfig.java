@@ -13,7 +13,7 @@ import java.util.List;
 
 @Configuration
 public class OpenAPIConfig {
-    private static final String SERVICE_URL = "http://localhost:8082";
+    private static final String SERVICE_URL = "http://localhost:8083";
     private SecurityScheme createAPIKeyScheme() {
         return new SecurityScheme()
                 .type(SecurityScheme.Type.HTTP)
