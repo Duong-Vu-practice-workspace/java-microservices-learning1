@@ -26,6 +26,8 @@ extra["springCloudVersion"] = "2025.0.0"
 val modelMapperVersion = "3.2.4";
 val openApiWebUIVersion = "2.8.9";
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-web")

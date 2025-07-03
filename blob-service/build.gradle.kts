@@ -22,8 +22,12 @@ configurations {
 repositories {
 	mavenCentral()
 }
+extra["springCloudVersion"] = "2025.0.0"
 val minioVersion = "8.5.17";
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("io.minio:minio:${minioVersion}")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
@@ -33,7 +37,11 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
-
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:${property("springCloudVersion")}")
+	}
+}
 tasks.withType<Test> {
 	useJUnitPlatform()
 }
