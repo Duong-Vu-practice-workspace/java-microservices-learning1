@@ -1,16 +1,19 @@
 package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.dto.request;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
+import lombok.experimental.SuperBuilder;
 
 import java.util.List;
 @Getter
 @Setter
+@SuperBuilder
+@NoArgsConstructor
+@AllArgsConstructor
 public class RequestPostDTO {
     private String title;
-    // private String id
     private List<String> topics;
-    private int upvotes;
-    private int downvotes;
     private String body;
 }

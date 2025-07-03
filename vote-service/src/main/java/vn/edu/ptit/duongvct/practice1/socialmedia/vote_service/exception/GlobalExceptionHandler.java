@@ -1,10 +1,10 @@
-package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.exception;
+package vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import vn.edu.ptit.duongvct.practice1.socialmedia.post_service.dto.response.RestResponse;
+import vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.response.RestResponse;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {

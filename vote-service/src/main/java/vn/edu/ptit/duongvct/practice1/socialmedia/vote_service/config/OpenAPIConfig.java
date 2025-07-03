@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.config;
+package vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.config;
 
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
@@ -13,7 +13,7 @@ import java.util.List;
 
 @Configuration
 public class OpenAPIConfig {
-    private static final String SERVICE_URL = "http://localhost:8082";
+    private static final String SERVICE_URL = "http://localhost:8083";
     private SecurityScheme createAPIKeyScheme() {
         return new SecurityScheme()
                 .type(SecurityScheme.Type.HTTP)

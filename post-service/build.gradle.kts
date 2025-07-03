@@ -22,11 +22,15 @@ configurations {
 repositories {
 	mavenCentral()
 }
-
+val modelMapperVersion = "3.2.4";
+val openApiWebUIVersion = "2.8.9";
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-mongodb")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("org.modelmapper:modelmapper:${modelMapperVersion}")
+	implementation("org.springframework.boot:spring-boot-starter-validation")
+	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${openApiWebUIVersion}")
 	compileOnly("org.projectlombok:lombok")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	annotationProcessor("org.projectlombok:lombok")

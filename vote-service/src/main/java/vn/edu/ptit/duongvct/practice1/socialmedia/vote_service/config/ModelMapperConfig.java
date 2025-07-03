@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.config;
+package vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.config;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

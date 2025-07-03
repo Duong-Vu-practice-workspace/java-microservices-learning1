@@ -1,7 +1,6 @@
-package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.util;
+package vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.util;
 
 import jakarta.servlet.http.HttpServletResponse;
-
 import jakarta.validation.constraints.NotNull;
 import org.springframework.core.MethodParameter;
 import org.springframework.core.io.Resource;
@@ -12,8 +11,8 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.http.server.ServletServerHttpResponse;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
-import vn.edu.ptit.duongvct.practice1.socialmedia.post_service.annotation.ApiMessage;
-import vn.edu.ptit.duongvct.practice1.socialmedia.post_service.dto.response.RestResponse;
+import vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.annotation.ApiMessage;
+import vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.response.RestResponse;
 
 
 @ControllerAdvice

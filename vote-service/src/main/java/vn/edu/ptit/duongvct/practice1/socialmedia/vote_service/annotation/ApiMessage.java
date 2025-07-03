@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.annotation;
+package vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

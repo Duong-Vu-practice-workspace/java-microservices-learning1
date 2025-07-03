@@ -1,4 +1,4 @@
-package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.dto.response;
+package vn.edu.ptit.duongvct.practice1.socialmedia.vote_service.response;
 
 import lombok.Getter;
 import lombok.Setter;
