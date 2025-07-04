@@ -1,5 +1,6 @@
 package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.service.impl;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 import vn.edu.ptit.duongvct.practice1.socialmedia.post_service.domain.Post;
@@ -36,6 +37,7 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    @CircuitBreaker(name = "voteService", fallbackMethod = "deletePostCallback")
     public void deletePost(String id) {
         Optional<Post> postDb = this.postRepository.findById(id);
         if (postDb.isEmpty()) {
@@ -43,7 +45,9 @@ public class PostServiceImpl implements PostService {
         }
         this.postRepository.deleteById(id);
     }
-
+    private boolean deletePostCallback(String id, Exception exception) throws Exception {
+        throw new Exception("Cannot delete a post. The service is currently unavailable");
+    }
     @Override
     public Post getPost(String id) {
         Optional<Post> postDb = this.postRepository.findById(id);

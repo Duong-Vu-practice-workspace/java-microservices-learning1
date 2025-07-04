@@ -1,5 +1,6 @@
 package vn.edu.ptit.duongvct.practice1.socialmedia.post_service.controller;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

@@ -34,6 +34,7 @@ dependencies {
 	implementation("org.modelmapper:modelmapper:${modelMapperVersion}")
 	implementation("org.springframework.boot:spring-boot-starter-validation")
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:${openApiWebUIVersion}")
+	implementation("org.springframework.cloud:spring-cloud-starter-circuitbreaker-resilience4j")
 	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("io.micrometer:micrometer-registry-prometheus")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
