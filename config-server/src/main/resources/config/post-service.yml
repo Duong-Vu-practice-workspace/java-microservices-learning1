@@ -13,3 +13,11 @@ logging:
     rollingpolicy:
       max-file-size: 5MB
       max-history: 7
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

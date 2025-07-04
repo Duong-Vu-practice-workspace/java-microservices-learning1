@@ -30,7 +30,7 @@ public class FormatRestResponse implements ResponseBodyAdvice<Object> {
         int status = servletResponse.getStatus();
         RestResponse<Object> res = new RestResponse<>();
         res.setStatusCode(status);
-        if (body instanceof String || body instanceof Resource) {
+        if (body instanceof String || body instanceof Resource || body instanceof byte[]) {
             return body;
         }
         String path = request.getURI().getPath();

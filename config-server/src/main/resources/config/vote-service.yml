@@ -13,3 +13,9 @@ logging:
     rollingpolicy:
       max-file-size: 5MB
       max-history: 7
+
+mmanagement:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -20,6 +20,8 @@ minio:
   file-size: 104857600 #  Maximum file size = 100MB
 
 eureka:
+  instance:
+    hostname: localhost
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
