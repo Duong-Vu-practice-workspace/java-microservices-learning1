@@ -20,6 +20,7 @@ repositories {
 extra["springCloudVersion"] = "2025.0.0"
 extra["springCloudStarterCircuitBreakerResilience4j"] = "3.3.0"
 dependencies {
+	implementation("org.springframework.boot:spring-boot-starter-oauth2-resource-server")
 	implementation("org.springframework.boot:spring-boot-starter-actuator")
 	implementation("org.springframework.cloud:spring-cloud-starter-config")
 	implementation("org.springframework.cloud:spring-cloud-starter-gateway-server-webflux")
